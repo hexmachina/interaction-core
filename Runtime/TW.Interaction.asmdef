@@ -1,0 +1,17 @@
+{
+    "name": "TW.Interaction",
+    "rootNamespace": "TW.Interaction",
+    "references": [
+        "GUID:a52205e7ac412bf49a6e469ab6e6e08c",
+        "GUID:eec0964c48f6f4e40bc3ec2257ccf8c5"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

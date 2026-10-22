@@ -1,0 +1,11 @@
+{
+    "name": "com.tw.interaction-core",
+    "version": "1.0.0",
+    "unity": "6000.0",
+    "displayName": "Interaction Core",
+    "description": "A flexible interaction system intended for first and third person games.",
+    "author": {
+        "name": "Tom Wilhelm",
+        "url": "https://www.tom-wilhelm.com"
+    }
+}
