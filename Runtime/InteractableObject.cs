@@ -76,5 +76,35 @@ namespace TW.Interaction
 			}
 			interactActivityEvent.activity.CancelInteract();
 		}
+
+		public void StartPrimaryInteractByComponent(Component component)
+		{
+			if (component is not InteractOperator interactOperator && !component.TryGetComponent<InteractOperator>(out interactOperator))
+			{
+				return;
+			}
+			int index = 0;
+			StartInteract(interactOperator, index);
+		}
+
+		public void StartSecondaryInteractByComponent(Component component)
+		{
+			if (component is not InteractOperator interactOperator && !component.TryGetComponent<InteractOperator>(out interactOperator))
+			{
+				return;
+			}
+			int index = 1;
+			StartInteract(interactOperator, index);
+		}
+
+		public void StartInteract(InteractOperator interactOperator, int index)
+		{
+			if (index < 0 || index >= Activities.Count)
+			{
+				throw new ArgumentOutOfRangeException($"{index} is out of range.");
+			}
+			InteractActivityEvent activityEvent = new() { interactable = this, activity = Activities[index], user = interactOperator };
+			interactOperator.StartInteract(activityEvent);
+		}
 	}
 }
